@@ -19,7 +19,8 @@ namespace MobileWorkerEvents.Application.Events.Commands.CreateEventCommand
                 .WithMessage("If event is expense, price is required");
 
             RuleFor(e => e.Name)
-                .NotNull();
+                .NotNull()
+                .NotEmpty();
 
             RuleFor(e => e.IsExpense)
                 .NotNull();
