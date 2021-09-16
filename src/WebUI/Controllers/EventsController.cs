@@ -17,15 +17,15 @@ namespace MobileWorkerEvents.WebUI.Controllers
         }
 
         [HttpGet("events")]
-        public async Task<ActionResult<List<EventDto>>> GetEvents([FromQuery] GetEventsQuery query)
+        public async Task<ActionResult<List<EventDto>>> GetEvents()
         {
-            return await Mediator.Send(query);
+            return await Mediator.Send(new GetEventsQuery());
         }
 
         [HttpGet("eventsByHour")]
-        public async Task<ActionResult<List<GroupedEventDto>>> GetEventsByHour([FromQuery] GetEventsByHourQuery query)
+        public async Task<ActionResult<List<GroupedEventDto>>> GetEventsByHour()
         {
-            return await Mediator.Send(query);
+            return await Mediator.Send(new GetEventsByHourQuery());
         }
     }
 }

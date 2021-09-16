@@ -45,21 +45,6 @@
           "Events"
         ],
         "operationId": "Events_GetEvents",
-        "parameters": [
-          {
-            "name": "query",
-            "in": "query",
-            "schema": {
-              "nullable": true,
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/GetEventsQuery"
-                }
-              ]
-            },
-            "x-position": 1
-          }
-        ],
         "responses": {
           "200": {
             "description": "",
@@ -83,21 +68,6 @@
           "Events"
         ],
         "operationId": "Events_GetEventsByHour",
-        "parameters": [
-          {
-            "name": "query",
-            "in": "query",
-            "schema": {
-              "nullable": true,
-              "oneOf": [
-                {
-                  "$ref": "#/components/schemas/GetEventsByHourQuery"
-                }
-              ]
-            },
-            "x-position": 1
-          }
-        ],
         "responses": {
           "200": {
             "description": "",
@@ -175,10 +145,6 @@
           }
         }
       },
-      "GetEventsQuery": {
-        "type": "object",
-        "additionalProperties": false
-      },
       "GroupedEventDto": {
         "type": "object",
         "additionalProperties": false,
@@ -199,10 +165,6 @@
             }
           }
         }
-      },
-      "GetEventsByHourQuery": {
-        "type": "object",
-        "additionalProperties": false
       }
     }
   }

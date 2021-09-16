@@ -18,7 +18,7 @@ namespace MobileWorkerEvents.Application.Events.Queries.GetEventsCommand
         public void Mapping(Profile profile)
         {
             profile.CreateMap<Event, EventDto>()
-                .ForMember(dest => dest.Total, e => e.MapFrom(e => e.IsExpense && e.Price != null
+                .ForMember(dest => dest.Total, e => e.MapFrom(e => e.IsExpense && e.Price.HasValue
                     ? e.Quantity * (double)e.Price
                     : e.Quantity))
                 .ForMember(dest => dest.EventId, e => e.MapFrom(e => e.Id));
