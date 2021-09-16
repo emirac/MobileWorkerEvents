@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>MobileWorkerEvents.Domain</RootNamespace>
+    <AssemblyName>MobileWorkerEvents.Domain</AssemblyName>
+  </PropertyGroup>
+
+</Project>
